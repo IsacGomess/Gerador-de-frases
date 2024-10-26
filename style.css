@@ -1,0 +1,158 @@
+body{
+    background:url('https://images.pexels.com/photos/19987954/pexels-photo-19987954/free-photo-of-estrada-via-natureza-floresta.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+    height:100vh;
+    position:relative;
+  }
+  /* first button */
+  #open-btn{
+    position:absolute;
+    top:20rem;
+    left:10%;
+    width:350px;
+    height: 80px;
+    font-size: 1.5rem;
+    background:transparent;
+    color: #fff;
+    border: solid 2px;
+    border-radius:10px;
+    padding: 5px;
+    box-shadow: 0 0 3px black;
+    transition: 1.7s;
+  }
+  
+  #open-btn:hover{
+    background:white;
+    color: black;
+  }
+  
+  /*Modal for input name with animation*/
+  #modal{
+    position: absolute;
+    background: white;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 70px;
+    padding:10px 20px;
+    border-radius:5px;
+    font-size:1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    animation-name:animatemodal;
+    animation-duration: .4s;
+  }
+  /*button close modal and input*/
+  #close-btn{
+    font-size: 2rem;
+    cursor: pointer;
+    color: red;
+  }
+  
+  /*container what contains modal and name */
+  #modal-container{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color:rgba(0,0,0,.2);
+  }
+  
+  
+  /*input text*/
+  .input{
+    display: none;
+    position:absolute;
+    left:52%;
+    top:21em;
+    animation-name:animationinput;
+    animation-duration: .4s;
+  }
+  input{
+    border: none;
+    border-radius:15px;
+    background:transparent;
+    box-shadow: 0 0 3px white;
+  }
+  input:hover{
+    background: white;
+    color: black;
+  }
+  /*button send name*/
+  .name{
+    border-radius:12px;
+    width: 35px ;
+    height: 30px;
+    background:lightgrey;
+    box-shadow: 0 0 5px white;
+  }
+  
+  /*frase */
+  .frase {
+    position:absolute;
+    width: 410px;
+    height: 150px;
+    left: 40%;
+    top:12em;
+    border-radius:25px;
+    transition: 1.4s;
+  }
+  
+  /* local where phrase is insert*/
+  .frase , li{
+    color:ligthgrey;
+    list-style:none;
+    font-size:1.6rem;
+    font-family: "Caveat", cursive;
+  }
+  li{
+    background: rgba(215,215,215,0.5);
+    border-radius:15px;
+  }
+  
+  /*opções  do tipo de texto */
+  /*container*/
+  .text-center{
+    position: absolute;
+    color: white;
+    top:10em;
+    left:15em;
+    display: flex;
+    
+  }
+  /*configuretion what going change in js*/
+  .container{
+    display: none;
+    
+  }
+  .btn{
+    opacity:0.9;
+  }
+  
+  /*animation modal*/
+  
+  @keyframes animatemodal{
+    from{
+      top:-300px;
+      opacity:0;
+    }
+    to{
+      top:50%;
+      opacity:1;
+      
+    }
+  }
+  
+  @keyframes animationinput{
+    from{
+      left: 2px;
+    }
+    to{
+      left: 52%;
+    }
+  }
+  
